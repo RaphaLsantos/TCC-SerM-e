@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Neuton:wght@200&family=Share+Tech+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+:root {
+  --roxa: #a683ff;
+  --verde: #cae4ce;
+  --azul: #d2ecf2;
+  --rosa: #ffe3dd;
+  --branco: #fff;
+  --preto: #000;
+}
+body {
+  background-image: url(./../../img/siteSerMae/boasVindas/fundo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Neuton', serif;
+  flex-wrap: wrap;
+}
+.hero{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 400px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    color: var(--roxa);
+}
+.card h1{
+    font-weight: bold;
+    color: var(--roxa);
+    font-size: 40px;
+}
+.card img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -70px;
+    margin-bottom: 30px;
+}
+.card button{
+    text-decoration: none;  
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+.button-yes{
+    background: var(--roxa);
+    color: var(--branco);
+    font-weight: bold;
+    font-size: 15px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem;
+    border: 2px solid var(--roxa);
+    border-radius: 12px;
+    transition: all ease .5s;
+}
+.button-yes:hover{
+    background: var(--branco);
+    color: var(--roxa);
+}
+
+.button-no{
+    cursor: pointer;
+    padding: 1rem;
+    border: 2px solid var(--roxa);
+    border-radius: 12px;
+    font-weight: bold;
+    color: var(--roxa);
+    width: 150px;
+    transition: all ease .5s;
+}
+.button-no:hover{
+    background: var(--roxa);
+    color: var(--branco);
+}
+
+input{
+    display: none;
+}

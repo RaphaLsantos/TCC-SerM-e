@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif ;
+}
+
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+}
+
+/* Mensagens */
+.home-section{
+    position: relative;
+    left: 240px;
+    width: calc(100% - 240px);
+    height: 88vh;
+}
+.conteudo-adm{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 15px 0 20px;
+}
+
+.conteudo-adm .responderMensagem{
+    background-color:azure;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+}
+
+.conteudo-adm .responderMensagem .infoMensagem{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40vh;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 25px;
+}
+
+.conteudo-adm .responderMensagem .infoMensagem .fotoUsuaria{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25vw;
+}
+.conteudo-adm .responderMensagem .infoMensagem .fotoUsuaria img{
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+    border: 2px solid var(--roxa);
+}
+
+.conteudo-adm .responderMensagem .infoMensagem .mensagemUsuaria{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40vw;
+    height: 100%;
+}
+
+.conteudo-adm .responderMensagem .infoMensagem .mensagemUsuaria .infoUsuaria{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    background-color: #a683ff;
+}
+
+.conteudo-adm .responderMensagem .infoMensagem .mensagemUsuaria .mensagem{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+
+.conteudo-adm .responderMensagem .infoMensagem .mensagemUsuaria .mensagem textarea{
+    margin-top: 5px;
+    padding: 10px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    outline: none;
+}
+
+/* Resposta ADM */
+.conteudo-adm .responderMensagem .infoResposta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40vh;
+}
+
+.conteudo-adm .responderMensagem .infoResposta .fotoAdm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25vw;
+}
+.conteudo-adm .responderMensagem .infoResposta .fotoAdm img{
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+    border: 2px solid var(--roxa);
+}
+
+.conteudo-adm .responderMensagem .infoResposta .mensagemAdm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40vw;
+    height: 100%;
+}
+
+.conteudo-adm .responderMensagem .infoResposta .mensagemAdm .infoAdm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    background-color: #a683ff;
+}
+
+.conteudo-adm .responderMensagem .infoResposta .mensagemAdm .mensagem{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+}
+
+.conteudo-adm .responderMensagem .infoResposta .mensagemAdm .mensagem textarea{
+    margin-top: 5px;
+    padding: 10px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px black;
+    outline: none;
+}

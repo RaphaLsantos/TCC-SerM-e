@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&family=Share+Tech+Mono&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+
+    --btn-padding:.6rem 2rem;
+    --border-radius: 2rem;
+    --card-border-radius:1rem;
+    --search-padding:.6rem 1rem;
+    --card-padding:.1rem;
+}
+body{
+    font-family: 'Neuton', serif;
+    color: var(--preto);
+    background: var(--branco);
+}
+
+/*/////////////////INICIO DICA-MENTAL////////////////////*/
+.corpo-dicas-mentais{
+    display: flex;
+    flex-direction: column;
+}
+
+/*inicio nav*/
+.nav-mental{
+    display: flex;
+    margin: 20px;
+    top: 0;
+    margin-top: 2rem; 
+    width: 100%;
+    margin-left: 6rem;
+    gap: 10rem;
+    height: 5vh;
+}   
+.name-dica{
+    display: flex;
+    flex-direction: row;
+    gap: 3.5rem;
+}
+.name-dica .add-dica{
+    background: var(--roxa);
+    color: var(--branco);
+    font-weight: bold;
+}
+.name-dica>h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--roxa);
+}
+.nav-mental .btn-voltar{
+    border: 2px solid var(--roxa);
+    color: var(--roxa);
+    font-weight: bold;
+    transition: all ease .5s;
+    cursor: pointer;
+    margin-left: 3rem;
+}
+.previous .btn-voltar:hover{
+    background: var(--roxa);
+    color: var(--branco);
+}
+/*final nav*/
+
+/*Inicio corpo dicas*/
+.dicas-mentais{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 7rem;
+}
+.card-dicas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+.img-dica{
+    aspect-ratio: 1/0;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--roxa);
+    width: 30%;
+}
+.img-dica .image{
+    width: 100%;
+    height: 100%;
+}
+.descricao-dica{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+.btn-dica{
+    width: 10rem;
+    text-align: center;
+    background: var(--roxa);
+    color: var(--branco);
+    margin-right: 3rem;
+    cursor: pointer;
+}
+/*final corpo dicas*/
+
+/*modal add-dica inicio*/
+  #open-modal {
+    background-color: var(--roxa);
+  }
+  button:hover {
+    opacity: 1;
+  }
+  #fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+  #modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    max-width: 90%;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+    height: 700px;
+  }
+  #fade,
+  #modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+  .modal-header h2{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--roxa);
+    margin-right: 15rem;
+  }
+  #modal.hide,
+  #fade.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #modal.hide {
+    top: 0;
+  }
+  .img-card-dica{
+    border: 2px solid;
+    border-color: var(--roxa);
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.25s;
+    cursor: pointer;
+    width: 6rem;
+    height: 6rem;
+  }
+.imagem{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+.imagem h2{
+  font-size: 25px;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+.dados{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap:2rem;
+}
+.name-input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+.name-input label{
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--roxa);
+}
+.name-input input{
+  padding: .5rem;
+  border: 2px solid var(--preto);
+  border-radius: 10px;
+  width: 250px;
+}
+.name-input-user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+}
+.name-input-user label{
+  font-size: 25px;
+  font-weight: bold;
+  color: var(--roxa);
+}
+.name-input-user input{
+  padding: .5rem;
+  border: 2px solid var(--preto);
+  border-radius: 10px;
+  width: 250px;
+}
+.text-dica h1{
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  margin-top: 1rem;
+}
+.corpo-add-input{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#campos {
+    max-height: 200px; /* Defina a altura máxima desejada */
+    overflow-y: auto; /* Adicione uma barra de rolagem vertical quando o conteúdo exceder a altura máxima */
+    margin-bottom: 20px; /* Adicione uma margem inferior para garantir que o primeiro campo seja visível */
+}
+.spacer {
+    height: 20px;
+}
+.add-input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10rem;
+  margin-top: 2rem;
+}
+.add-input i{
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: var(--roxa);
+  cursor: pointer;
+}
+.add-input h3{
+  font-size: 15px;
+  color: var(--roxa);
+}
+.body-inputs{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.body-inputs input{
+  padding: 1rem;
+  border: 2px solid var(--roxa);
+  border-radius: 10px;
+  width: 500px;
+}
+.btn-dica-add{
+  width:10rem;
+  text-align: center;
+  background: var(--roxa);
+  color: var(--branco);
+  cursor: pointer;
+}
+
+/*modal descrição dica inicio*/
+.modal-desc {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200%;
+}
+.modal-content-desc {
+  background-color: #fff;
+  border: 2px solid var(--roxa);
+  border-radius: 10px;
+  margin: 15% auto;
+  padding: 20px;
+  width: 60%;
+  height: 450px;
+}
+.modal-content-desc h2{
+  font-size: 35px;
+  text-align: center;
+  color: var(--preto);
+}
+.txt-desc{
+  border: 2px solid var(--preto);
+  border-radius: 10px;
+  width: 100%;
+  height: 250px;
+  margin-top: 2rem;
+}
+.close-desc {
+  font-size: 24px;
+  cursor: pointer;
+}
+.modal-content-desc .btn-dica-add{
+  margin-left: 13rem;
+  margin-top: 1rem;
+}
+/*modal descrição dica final*/
+/*modal add-dica fim*/
+
+/*/////////////////FINAL DICA-MENTAL////////////////////*/
+

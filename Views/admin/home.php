@@ -31,48 +31,27 @@ $usuarioDAO = new usuarioDAO();
         <div class="conteudo-adm">
             <div class="main-user">
                 <div class="userCadastrado">
+                    <div class="numUsers">
+                        <i class='bx bxs-user'></i>
+                        <span><?= $usuarioDAO->listaCadastros("cadastrados"); ?></span>
+                    </div><!-- Fim NumUsers -->
                     <p>Usuarias Cadastradas</p>
-                    <div class="numCadastrados">
-                        <i class='bx bxs-user'></i>
-                        <span><?= $usuarioDAO->listaCadastros(); ?></span>
-                    </div>
-
                 </div> <!-- Fim UserCadastrado -->
 
-                <div class="userCadastrado">
+                <div class="userAtivas">
+                    <div class="numUsers">
+                        <i class='bx bxs-user'></i>
+                        <span><?= $usuarioDAO->listaCadastros("ativos"); ?></span>
+                    </div><!-- Fim NumUsers -->
                     <p>Usuarias Ativas</p>
-                    <div class="numCadastrados">
-                        <i class='bx bxs-user'></i>
-                        <span>0</span>
-                    </div>
-
                 </div> <!-- Fim UserCadastrado -->
 
-                <div class="userCadastrado">
+                <div class="userSuspenso">
+                    <div class="numUsers">
+                        <i class='bx bxs-user'></i>
+                        <span><?= $usuarioDAO->listaCadastros("suspenso"); ?></span>
+                    </div><!-- Fim NumUsers -->
                     <p>Usuarias Suspensos</p>
-                    <div class="numCadastrados">
-                        <i class='bx bxs-user'></i>
-                        <span>0</span>
-                    </div>
-
-                </div> <!-- Fim UserCadastrado -->
-
-                <div class="userCadastrado">
-                    <p>Administradores Cadastrados</p>
-                    <div class="numCadastrados">
-                        <i class='bx bxs-user'></i>
-                        <span>0</span>
-                    </div>
-
-                </div> <!-- Fim UserCadastrado -->
-
-                <div class="userCadastrado">
-                    <p>Administradores Suspensos</p>
-                    <div class="numCadastrados">
-                        <i class='bx bxs-user'></i>
-                        <span>0</span>
-                    </div>
-
                 </div> <!-- Fim UserCadastrado -->
             </div><!-- Fim main-user -->
 
@@ -183,7 +162,10 @@ $usuarioDAO = new usuarioDAO();
                                         echo "Banido";
                                     }
                                     ?></td>
-                                <td class="iconEdit"><i class='bx bx-edit'></i></td>
+                                <td class="iconEdit">
+                                    <button onClick="toggleModal()" class='bx bx-edit'>
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     <?php endforeach; ?>
@@ -206,11 +188,15 @@ $usuarioDAO = new usuarioDAO();
 
         <div id="modal-body">
             <div class="infosUsuario">
-                <h2><?= $usuario->getNomeUsuario() ?></h2>
+
+            <div class="nomeFotoUser">
                 <div class="mainFoto">
                     <div class="foto">
                         <img src="../../img/Perfis/<?= $usuario->getFotoDePerfil() ?>" alt="">
-                    </div><!-- Fim Foto -->
+                    </div><!-- Fim Foto --> 
+                </div><!-- Fim MainFoto -->
+                <h2><?= $usuario->getNomeUsuario() ?></h2>
+            </div><!-- Fim NomeFotoUser -->
 
                     <div class="mainInfoUser">
                         <div class="email">
@@ -224,9 +210,9 @@ $usuarioDAO = new usuarioDAO();
                                 <?= $usuario->getApelidoUsuario() ?>
                             </h3>
                         </div><!-- Fim Apelido -->
-                    </div><!-- Fim MainInfoUser -->
 
-                    <div class="situacaoConta">
+                        <div class="situacaoConta">
+                            <p>Status:</p>
                         <h3 class="situacaoUser">
                             <?php
                             if ($usuario->getStatusConta() == 1) {
@@ -258,6 +244,12 @@ $usuarioDAO = new usuarioDAO();
                         </div>
 
                     </div>
+                    </div><!-- Fim MainInfoUser -->
+
+                    
+
+
+
                 </div><!-- Fim MainFoto -->
                 <form method="post" action="../../Controller/administradorController.php">
                 <div class="dropdownSituacao">
@@ -265,6 +257,7 @@ $usuarioDAO = new usuarioDAO();
                     <select id="situacao" name="opção">
                         <option value="2">Suspenso</option>
                         <option value="1">Ativo</option>
+                        <option value="3">Tornar Adm</option>
                     </select>
                 </div><!-- Fim DropdownSituação -->
 

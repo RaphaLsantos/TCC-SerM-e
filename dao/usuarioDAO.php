@@ -4,14 +4,13 @@
 class usuarioDAO
 {
 
-    public function createUsuario(Usuario $usuario)
+    public function create(Usuario $usuario)
     {
         try {
-            $sql = "INSERT INTO tbusuario (nomeUsuario, apelidoUsuario, telefoneUsuario, emailUsuario, nascUsuario, senhaUsuario) VALUES (:nome, :apelido, :phone, :email, :dataNasc, :senha); ";
+            $sql = "INSERT INTO tbusuario (nomeUsuario, telefoneUsuario, emailUsuario, nascUsuario, senhaUsuario) VALUES (:nome, :phone, :email, :dataNasc, :senha); ";
 
             $query = conexao::getConexao()->prepare($sql);
             $query->bindValue(':nome', $usuario->getNomeUsuario());
-            $query->bindValue(':apelido', $usuario->getApelidoUsuario());
             $query->bindValue(':phone', $usuario->getTelefoneUsuario());
             $query->bindValue(':email', $usuario->getEmailUsuario());
             $query->bindValue(':dataNasc', $usuario->getDataNascimentoUsuario());
@@ -23,7 +22,7 @@ class usuarioDAO
         }
     }
 
-    public function readUsuario()
+    public function read()
     {
         try {
             $sql = "SELECT * FROM tbusuario";
@@ -60,18 +59,48 @@ class usuarioDAO
         }
     }
 
-    public function listaCadastros()
+    public function listaCadastros($tipo)
     {
-
-        try {
-            $querySelect = "SELECT * FROM tbUsuario";
-            $resultado = conexao::getConexao()->query($querySelect);
-            $cadastros = $resultado->fetchAll();
-            $qntd = count($cadastros);
-            return $qntd;
-        } catch (PDOException $e) {
-            echo $e->getMessage();
+        if($tipo == "cadastrados"){
+            try {
+                $querySelect = "SELECT * FROM tbUsuario";
+                $resultado = conexao::getConexao()->query($querySelect);
+                $cadastros = $resultado->fetchAll();
+                $qntd = count($cadastros);
+                return $qntd;
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }else if($tipo == "ativos"){
+            try {
+                $querySelect = "SELECT * FROM tbUsuario WHERE statusConta = 1";
+                $resultado = conexao::getConexao()->query($querySelect);
+                $cadastros = $resultado->fetchAll();
+                $qntd = count($cadastros);
+                if(empty($qntd)){
+                    return 0;
+                }else{
+                    return $qntd;
+                }
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
+        }else if($tipo == "suspenso"){
+            try {
+                $querySelect = "SELECT * FROM tbUsuario WHERE statusConta = 2";
+                $resultado = conexao::getConexao()->query($querySelect);
+                $cadastros = $resultado->fetchAll();
+                $qntd = count($cadastros);
+                if(empty($qntd)){
+                    return 0;
+                }else{
+                    return $qntd;
+                }
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+            }
         }
+     
     }
 
     public function informacoesAdicionais(Usuario $usuario)
@@ -115,7 +144,7 @@ class usuarioDAO
 
 
             if ($stmt->execute()) {
-                echo "Tipo ATUALIZADO COM SUCESSO!";
+                echo "Tipo ATUALIZADo COM SUCESSO!";
             } else {
                 echo "Erro ao alterar tipo de perfil.";
             }
