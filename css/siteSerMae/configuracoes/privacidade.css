@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&family=Share+Tech+Mono&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+
+    --btn-padding:.6rem 2rem;
+    --border-radius: 2rem;
+    --card-border-radius:1rem;
+    --search-padding:.6rem 1rem;
+    --card-padding:.1rem;
+}
+body{
+    font-family: 'Neuton', serif;
+    color: var(--preto);
+    background: var(--branco);
+}
+
+
+.opcoes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 5rem;
+}
+.text-1{
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--roxa);
+}
+.nav-conta{
+  position: absolute;
+  top: 8%;
+  left: 60%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  flex-direction: row;
+  gap: 20rem;
+  white-space: nowrap;
+}
+.btn-conta-voltar{
+  padding: var(--btn-padding);
+  cursor: pointer;
+  transition: all ease .5s;
+  font-weight: bold;
+  color: var(--roxa);
+  font-size: 20px;
+}
+.opcoes .menu{
+  position: absolute;
+  top: 20%;
+  left: 23%;
+}
+.opcoes .menu span i{
+  font-size: 25px;
+  transition: all ease 1s;
+  margin-right: 4rem;
+}
+.opcoes .menu span i:hover{
+  transform: scale(1.5);
+}
+.sub-menu-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--roxa);
+  gap: 35rem;
+  border: 2px solid transparent;
+  transition: all ease .5s;
+}
+.sub-menu-link-blocked{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--roxa);
+  gap: 35rem;
+  border: 2px solid transparent;
+  transition: all ease .5s;
+}
+.sub-menu-link-blocked:hover{
+  border: 2px solid var(--roxa);
+  border-radius: 10px;
+  z-index: 3px;
+}
+.sub-menu-link:hover{
+  border: 2px solid var(--roxa);
+  border-radius: 10px;
+  z-index: 3px;
+}
+.sub-menu-link-blocked p{
+  width: 100%;
+  font-size: 25px;
+  color: var(--roxa);
+  font-weight: bold;
+  margin-left: 2rem;
+  white-space: nowrap;
+}
+.sub-menu-link p{
+  width: 100%;
+  font-size: 25px;
+  color: var(--roxa);
+  font-weight: bold;
+  margin-left: 2rem;
+  white-space: nowrap;
+}
+
+/*modal privar conta inicio*/
+.modal-container {
+  position: relative;
+}
+/* Estilos para o modal */
+.modal {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 250px;
+  height: 130px;
+  border-radius: var(--card-border-radius);
+  border: .5px solid var(--roxa);
+  z-index: 10;
+}
+.modal .text{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--preto);
+}
+.buttonsSair{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.yesSair{
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all ease .2s;
+  color: var(--roxa);
+}
+.yesSair:hover{
+  background: var(--roxa);
+  color: var(--branco);
+  transform: scale(1.1);
+  padding: .2rem;
+}
+.noSair{
+   font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all ease .2s;
+  color: var(--roxa);
+}
+.noSair:hover{
+  background: red;
+  color: var(--branco);
+  transform: scale(1.1);
+  padding: .2rem;
+}
+.sub-menu-link:focus + .modal {
+  display: block;
+}
+
+/* Estilos para o botão de fechar */
+.close-button {
+  display: block;
+  text-align: right;
+  text-decoration: underline;
+  cursor: pointer;
+  text-decoration: none;
+}
+/*modal privar conta final*/
+
+
+
+/*modal inicio blocked*/
+.modal-blocked {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+.modal-content-blocked {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--preto);
+  transition: all ease .5s;
+  cursor:pointer;
+}
+.close:hover {
+  color: red;
+  transform: scale(1.1);
+}
+.cards-blocked{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.cards-blocked .cards{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5.5rem;
+  justify-content: center;
+}
+.cards-blocked .cards>h3{
+  text-align: center;
+}
+.cards-blocked .cards .img-blocked{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid var(--roxa);
+}
+.scroll-view-blocked{
+  max-height: 300px;
+  overflow-y: scroll; 
+  cursor: pointer;
+}
+.custom-hr {
+  border: none; 
+  height: 1px; 
+  background-color: var(--roxa); 
+  margin: 5px 0; 
+}
+.text-blocked{
+  font-weight: bold;
+  color: var(--roxa);
+}
+.scroll-view-blocked::-webkit-scrollbar {
+  width: 12px; 
+}
+.scroll-view-blocked::-webkit-scrollbar-thumb {
+  background-color: var(--roxa); 
+  border-radius: 6px; 
+}
+/*modal final blocked*/
+
+
+/*modal opção blocked incio*/
+.modal-container-opcao{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  cursor:default;
+}
+.modal-box-opcao{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+.modal-box-opcao>p{
+  margin-top: -2rem;
+  font-size: 20px;
+}
+.modal-box-opcao .buttons{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+.modal-box-opcao .buttons .yes-unlock-1{
+  background: var(--branco);
+  color: var(--roxa);
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--roxa);
+  padding: .5rem;
+  cursor: pointer;
+  transition: all ease .5s;
+}
+.modal-box-opcao .buttons .yes-unlock-1:hover{
+  background: var(--roxa);
+  color: var(--branco);
+}
+.modal-box-opcao .buttons .yes-unlock-2{
+  background: var(--roxa);
+  color: var(--branco);
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--roxa);
+  padding: .5rem;
+  cursor: pointer;
+  transition: all ease .5s;
+}
+.modal-box-opcao .buttons .yes-unlock-2:hover{
+  background: var(--branco);
+  color: var(--roxa);
+}
+/*modal opção blocked final*/
+
+
+
+
+/*botao desbloquear user*/
+/* Genel stil */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  margin: 10px;
+}
+/* Giriş stil */
+.toggle-switch .toggle-input {
+  display: none;
+}
+/* Anahtarın stilinin etrafındaki etiketin stil */
+.toggle-switch .toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 24px;
+  background-color: var(--roxa);
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+/* Anahtarın yuvarlak kısmının stil */
+.toggle-switch .toggle-label::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  background-color: #fff;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+/* Anahtarın etkin hale gelmesindeki stil değişiklikleri */
+.toggle-switch .toggle-input:checked + .toggle-label {
+  background-color: #4CAF50;
+}
+.toggle-switch .toggle-input:checked + .toggle-label::before {
+  transform: translateX(16px);
+}
+/* Light tema */
+.toggle-switch.light .toggle-label {
+  background-color: #BEBEBE;
+}
+.toggle-switch.light .toggle-input:checked + .toggle-label {
+  background-color: #9B9B9B;
+}
+.toggle-switch.light .toggle-input:checked + .toggle-label::before {
+  transform: translateX(6px);
+}
+/* Dark tema */
+.toggle-switch.dark .toggle-label {
+  background-color: #4B4B4B;
+}
+.toggle-switch.dark .toggle-input:checked + .toggle-label {
+  background-color: #717171;
+}
+.toggle-switch.dark .toggle-input:checked + .toggle-label::before {
+  transform: translateX(16px);
+}
+/*botao desbloquear user*/
+
+
+

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&family=Share+Tech+Mono&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+
+    --btn-padding:.6rem 2rem;
+    --border-radius: 2rem;
+    --card-border-radius:1rem;
+    --search-padding:.6rem 1rem;
+    --card-padding:.1rem;
+}
+body{
+    font-family: 'Neuton', serif;
+    color: var(--preto);
+    background: var(--branco);
+}
+
+.opcoes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 5rem;
+}
+.text-titulo{
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 8%;
+    left: 60%;
+    transform: translate(-50%, -50%);   
+    color: var(--roxa);
+}
+.opcoes .menu{
+    position: absolute;
+    top: 20%;
+    left: 25%;
+}
+.opcoes .menu span i{
+    font-size: 25px;
+    transition: all ease 1s;
+    margin-right: 4rem;
+}
+.opcoes .menu span i:hover{
+    transform: scale(1.5);
+}
+.sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--roxa);
+    gap: 35rem;
+    border: 2px solid transparent;
+    transition: all ease .5s;
+}
+.sub-menu-link:hover{
+    border: 2px solid var(--roxa);
+    border-radius: 10px;
+}
+.sub-menu-link p{
+    width: 100%;
+    font-size: 25px;
+    color: var(--roxa);
+    font-weight: bold;
+    margin-left: 4rem;
+}
+
+

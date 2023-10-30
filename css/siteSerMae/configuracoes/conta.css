@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&family=Share+Tech+Mono&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+
+    --btn-padding:.6rem 2rem;
+    --border-radius: 2rem;
+    --card-border-radius:1rem;
+    --search-padding:.6rem 1rem;
+    --card-padding:.1rem;
+}
+body{
+    font-family: 'Neuton', serif;
+    color: var(--preto);
+    background: var(--branco);
+}
+
+.opcoes{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 5rem;
+}
+.text-1{
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--roxa);
+}
+.nav-conta{
+  position: absolute;
+  top: 8%;
+  left: 60%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  flex-direction: row;
+  gap: 20rem;
+  white-space: nowrap;
+}
+.btn-conta-voltar{
+  padding: var(--btn-padding);
+  cursor: pointer;
+  transition: all ease .5s;
+  font-weight: bold;
+  color: var(--roxa);
+  font-size: 20px;
+}
+.opcoes .menu{
+  position: absolute;
+  top: 20%;
+  left: 25%;
+}
+.opcoes .menu span i{
+  font-size: 25px;
+  transition: all ease 1s;
+  margin-right: 4rem;
+}
+.opcoes .menu span i:hover{
+  transform: scale(1.5);
+}
+.sub-menu-link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--roxa);
+  gap: 35rem;
+  border: 2px solid transparent;
+  transition: all ease .5s;
+}
+.sub-menu-link:hover{
+  border: 2px solid var(--roxa);
+  border-radius: 10px;
+}
+.sub-menu-link p{
+  width: 100%;
+  font-size: 25px;
+  color: var(--roxa);
+  font-weight: bold;
+  margin-left: 2rem;
+  white-space: nowrap;
+}
+
+/* Estilos para o modal container */
+.modal-container {
+  position: relative;
+}
+/* Estilos para o modal */
+.modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  width: 250px;
+  height: 130px;
+  border-radius: var(--card-border-radius);
+  border: .5px solid var(--roxa);
+}
+.modal .text{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--preto);
+}
+.buttonsSair{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.yesSair{
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all ease .2s;
+  color: var(--roxa);
+}
+.yesSair:hover{
+  background: var(--roxa);
+  color: var(--branco);
+  transform: scale(1.1);
+  padding: .2rem;
+}
+.noSair{
+   font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: all ease .2s;
+  color: var(--roxa);
+}
+.noSair:hover{
+  background: red;
+  color: var(--branco);
+  transform: scale(1.1);
+  padding: .2rem;
+}
+.sub-menu-link:focus + .modal {
+  display: block;
+}
+/* Estilos para o botão de fechar */
+.close-button {
+  display: block;
+  text-align: right;
+  text-decoration: underline;
+  cursor: pointer;
+  text-decoration: none;
+}

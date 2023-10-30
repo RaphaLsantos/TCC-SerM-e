@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&family=Share+Tech+Mono&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+
+    --btn-padding:.6rem 2rem;
+    --border-radius: 2rem;
+    --card-border-radius:1rem;
+    --search-padding:.6rem 1rem;
+    --card-padding:.1rem;
+}
+body{
+    font-family: 'Neuton', serif;
+    color: var(--preto);
+    background: var(--branco);
+}
+
+.text-1{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--roxa);
+}
+.nav-conta{
+    position: absolute;
+    top: 8%;
+    left: 60%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    flex-direction: row;
+    gap: 20rem;
+    white-space: nowrap;
+}
+.btn-conta-voltar{
+    padding: var(--btn-padding);
+    cursor: pointer;
+    transition: all ease .5s;
+    font-weight: bold;
+    color: var(--roxa);
+    font-size: 20px;
+}
+.form-senha{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+.label-senha {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.input-senha{
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid var(--rosa);
+    border-radius: 5px;
+    outline: none;
+    font-size: 20px;
+}
+.btn-senha{
+    background-color:var(--roxa);
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease .5s;
+    font-weight: 300;
+}
+.btn-senha:hover {
+    background-color: var(--branco);
+    color: var(--roxa);
+    border: 2px solid var(--roxa);
+    font-weight: bold;
+}

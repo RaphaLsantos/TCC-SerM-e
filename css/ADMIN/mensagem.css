@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif ;
+}
+
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+}
+
+/* Mensagens */
+.home-section{
+    position: relative;
+    left: 240px;
+    width: calc(100% - 240px);
+    height: 88vh;
+}
+.conteudo-adm{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 0 0 20px;
+}
+
+.conteudo-adm .mainMensagem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Mensagens Card Recebidas */
+.conteudo-adm .mainMensagem .msgRecebidas,
+.msgRespondida,
+.msgNVistas{
+    background-color: var(--roxa);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24vw;
+    height: 20vh;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+    transition: all 0.6s ease;
+}
+.conteudo-adm .mainMensagem .msgRecebidas:hover,
+.msgRespondida:hover,
+.msgNVistas:hover{
+    box-shadow: 0 0 20px black;
+}
+
+.conteudo-adm .mainMensagem .msgRecebidas,
+.msgRespondida,
+.msgNVistas, 
+p{
+    font-size: large;
+    color: #ffffff;
+}
+
+.conteudo-adm .mainMensagem  .numCadastrados{
+    display: flex;
+    align-items: center;
+    height: 90%;
+}
+
+.conteudo-adm .mainMensagem  .numCadastrados i,
+span{
+    font-size: xx-large;
+    color: #000000;
+}
+
+.conteudo-adm .mainMensagem  .numCadastrados span{
+    margin-left: 30px;
+}
+/* Fim Mensagens Card */
+
+.conteudo-adm .tabelaMensagem{
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+    height: 60vh;
+    margin: 0 0 0 20px;
+}
+
+.conteudo-adm .tabelaMensagem .msgUsuaria{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    overflow: auto;
+    height: 420px;
+    overflow-x: hidden;
+}
+
+.conteudo-adm .tabelaMensagem .msgUsuaria table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.conteudo-adm .tabelaMensagem .msgUsuaria table thead{
+    background-color: #ddd;
+    height: 40px;
+}
+
+.conteudo-adm .tabelaMensagem .msgUsuaria table thead > tr > th{
+    position: sticky;
+    top: 0;
+    background-color: #ddd;
+}
+
+.conteudo-adm .tabelaMensagem .msgUsuaria table tbody tr{
+    text-align: center;
+    height: 6vh;
+}
+
+.conteudo-adm .tabelaMensagem .msgUsuaria table tbody tr .fotoUsuaria{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.conteudo-adm .tabelaMensagem .msgUsuaria table tbody tr:hover{
+    background-color: var(--rosa);
+}
+
+.conteudo-adm .tabelaMensagem .msgUsuaria table tbody tr .iconResponder{
+    font-size: x-large;
+    cursor: pointer;
+}
+
+
+.conteudo-adm .tabelaMensagem .Mensagem{
+    width: 31.5%;
+    height: 420px;
+    overflow: auto;
+    height: 420px;
+    overflow-x: hidden;
+}
+
+.conteudo-adm .tabelaMensagem .Mensagem .UserMsg{
+    background-color: var(--roxa);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 9.7vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.conteudo-adm .tabelaMensagem .Mensagem .UserMsg .fotoUsuaria{
+    background-color: var(--azul);
+    height: 7vh;
+    width: 3.5vw;
+    border-radius: 50%;
+}
+
+.conteudo-adm .tabelaMensagem .Mensagem .UserMsg .icons{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+.conteudo-adm .tabelaMensagem .Mensagem .UserMsg .icons .bx-clipboard{
+    color: rgb(51, 244, 244);
+}
+.conteudo-adm .tabelaMensagem .Mensagem .UserMsg .icons .bx-trash{
+    color: red;
+}
+
+
+.conteudo-adm .tabelaMensagem .Mensagem table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.conteudo-adm .tabelaMensagem .Mensagem table thead{
+    background-color: #ddd;
+    height: 40px;
+}
+
+.conteudo-adm .tabelaMensagem .Mensagem table thead > tr > th{
+    position: sticky;
+    top: 0;
+    background-color: #ddd;
+}
+
+.conteudo-adm .tabelaMensagem .Mensagem table tbody tr{
+    text-align: center;
+    height: 6vh;
+}
+
+.conteudo-adm .tabelaMensagem .Mensagem table tbody tr .fotoUsuaria{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.conteudo-adm .tabelaMensagem .Mensagem table tbody tr:hover{
+    background-color: var(--rosa);
+}
+
+.conteudo-adm .tabelaMensagem .Mensagem table tbody tr .iconResponder{
+    font-size: x-large;
+    cursor: pointer;
+}
+
+/* Modal Mensagem */
+#fadeMensagem , #modalMensagem{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fadeMensagem{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+#modalMensagem{
+    position: fixed;
+    background-color: #ffffff;
+    transform: translate(-50% , -50%);
+    left: 50%;
+    top: 50%;
+    z-index: 200;
+    width: 700px;
+    max-width: 60%;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px black;
+}
+
+#modalHeaderMensagem{
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+
+#modalHeaderMensagem h3{
+    display: flex;
+}
+
+#modalHeaderMensagem p{
+    color: #000;
+    margin-left: 20px;
+}
+
+#modalHeaderMensagem #fecharModalMensagem{
+    background-color: rgb(226, 64, 64);
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#modalBodyMensagem{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#modalBodyMensagem .infoUsuario{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 2px black;
+}
+
+#modalBodyMensagem .infoUsuario .fotoNome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalBodyMensagem .infoUsuario .fotoNome p{
+    color: #000;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin: 0 0 5px 0;
+}
+
+#modalBodyMensagem .infoUsuario .fotoNome img{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    border: 2px solid var(--roxa);
+}
+
+#modalBodyMensagem .infoUsuario .fotoNome .apelidoUser{
+    margin-top: 3px;
+    font-size: x-large;
+}
+
+#modalBodyMensagem .infoUsuario .fotoNome .apelidoUser{
+    margin-top: 3px;
+}
+
+#modalBodyMensagem .infoUsuario .mensagemUsuaria{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    height: 20vh;
+}
+
+#modalBodyMensagem .infoUsuario .mensagemUsuaria textarea{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0 0 5px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size:medium;
+    outline: none;
+
+}
+
+/* Info Adm*/
+#modalBodyMensagem .infosAdm{
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#modalBodyMensagem .infosAdm .fotoNomeAdm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modalBodyMensagem .infosAdm .fotoNomeAdm p{
+    color: #000;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin: 0 0 5px 0;
+}
+
+#modalBodyMensagem .infosAdm .fotoNomeAdm img{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    border: 2px solid var(--roxa);
+}
+
+#modalBodyMensagem .infosAdm .fotoNomeAdm .apelidoAdm{
+    margin-top: 3px;
+    font-size: x-large;
+}
+
+#modalBodyMensagem .infosAdm .fotoNomeAdm .apelidoAdm{
+    margin-top: 3px;
+}
+
+#modalBodyMensagem .infosAdm .respostaAdm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    height: 25vh;
+}
+
+#modalBodyMensagem .infosAdm .respostaAdm textarea{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0 0 5px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size:medium;
+    outline: none;
+}
+
+#modalBodyMensagem .infosAdm .respostaAdm .btnResponder{
+    background-color: #00ab41;
+    width: 100%;
+    height: 4vh;
+    margin-top: 15px;
+    box-shadow: 0 0 5px;
+    border-radius: 10px;
+    outline: none;
+    border: solid 1px black;
+    cursor: pointer;
+    font-size: larger;
+    transition: all .2s ease-in;
+}
+
+#modalBodyMensagem .infosAdm .respostaAdm .btnResponder:hover{
+    background-color: #fff;
+    color: #00ab41;
+}
+
+#fadeMensagem.hide,
+#modalMensagem.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modalMensagem.hide{
+    top: 0;
+}
+
+/* Modal Excluir */
+#fade , #modal{
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+}
+
+#modal{
+    position: fixed;
+    background-color: #ffffffe0;
+    backdrop-filter: blur(10px);
+    transform: translate(-50% , -50%);
+    left: 50%;
+    top: 50%;
+    z-index: 200;
+    width: 500px;
+    max-width: 60%;
+    padding: 1.2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px black;
+}
+
+#modal-header{
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+
+#modal-header h3{
+    display: flex;
+}
+
+#modal-header p{
+    color: #000;
+    margin-left: 20px;
+}
+
+#modal-header #fechar-modal{
+    background-color: rgb(226, 64, 64);
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#modal-body{
+    display: flex;
+    flex-direction: column;
+}
+
+#modal-body .actionLinks{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+#modal-body .links{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+
+#modal-body .actionLinks .nao{
+    color: rgb(226, 64, 64);
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all .3s ease-in;
+}
+
+#modal-body .actionLinks .sim{
+    color: #00ab41;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all .3s ease-in;
+}
+
+#modal-body .actionLinks .nao:hover{
+    color: white;
+    background-color: rgb(226, 64, 64);
+}
+
+#modal-body .actionLinks .sim:hover{
+    color: white;
+    background-color: #00ab41;
+}
+
+#fade.hide,
+#modal.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal.hide{
+    top: 0;
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif ;
+}
+
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+}
+
+/* DashBoard */
+.home-section{
+    position: relative;
+    left: 260px;
+    width: calc(100% - 260px);
+    height: 100%;
+}
+.conteudo-adm{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 15px 0 0;
+}
+
+.conteudo-adm .navAdm{
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo-adm .navAdm .Adm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-adm .navAdm .Adm img{
+    width: 17vh;
+    height: 17vh;
+    border-radius: 50%;
+    border: solid 2px var(--roxa);
+}
+
+.conteudo-adm .navAdm .Adm .nomeFuncao{
+    height: 100%;
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+
+.conteudo-adm .navAdm .Adm .nomeFuncao h2::after{
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 0.3rem;
+    background-color: #a683ff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+/* BodyAdm */
+.conteudo-adm .opcoesAdm{
+    height: 30vh;
+    width: 60vw;
+    padding: 20px;
+}
+
+.conteudo-adm .opcoesAdm .btnGroup{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.conteudo-adm .opcoesAdm .btnGroup button{
+    background-color: var(--rosa);
+    width: 45%;
+    height: 8vh;
+    font-size: larger;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 0 5px black;
+    outline: none;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+.conteudo-adm .opcoesAdm .btnGroup button:hover{
+    background-color: var(--roxa);
+}
+
+.conteudo-adm .avaliacoesAdm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    padding: 1rem;
+}
+
+.conteudo-adm .avaliacoesAdm .cardProatividade,
+.cardAvaliacao,
+.cardProblemas,
+.cardAprovacao{
+    background-color: var(--roxa);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 60%;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 0 5px black;
+}
