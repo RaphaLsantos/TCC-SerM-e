@@ -139,20 +139,7 @@ $usuarioDAO = new usuarioDAO();
                                 <td><?= $usuario->getIdUsuario() ?></td>
                                 <td><?= $usuario->getNomeUsuario() ?></td>
                                 <td><?= $usuario->getEmailUsuario() ?></td>
-                                <td><?php
-                                    if ($usuario->getTipoDePerfil() == 1) {
-                                        echo "Mãe convencional";
-                                    } else if ($usuario->getTipoDePerfil() == 2) {
-                                        echo "Gestante";
-                                    } else if ($usuario->getTipoDePerfil() == 3) {
-                                        echo "Tentante";
-                                    } else if ($usuario->getTipoDePerfil() == 4) {
-                                        echo "Mãe Solo";
-                                    } else {
-                                        echo "Desconhecido";
-                                    }
-                                    ?>
-                                </td>
+                                <td><?= $usuario->getTipoDePerfil() ?></td>
                                 <td><?php
                                     if ($usuario->getStatusConta() == 1) {
                                         echo "Ativo";

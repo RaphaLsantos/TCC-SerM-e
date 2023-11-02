@@ -25,7 +25,9 @@ class usuarioDAO
     public function read()
     {
         try {
-            $sql = "SELECT * FROM tbusuario";
+            $sql = "SELECT * FROM tbusuario
+            INNER JOIN tbTipoPerfil ON tbusuario.tipoConta = tbTipoPerfil.idTipo
+            ";
             $query = conexao::getConexao()->query($sql);
             $lista = $query->fetchAll(PDO::FETCH_ASSOC);
             $f_lista = array();
@@ -163,7 +165,7 @@ class usuarioDAO
         $usuario->setTelefoneUsuario($row['telefoneUsuario']);
         $usuario->setDataNascimentoUsuario($row['nascUsuario']);
         $usuario->setSenhaUsuario($row['senhaUsuario']);
-        $usuario->setTipoDePerfil($row['tipoConta']);
+        $usuario->setTipoDePerfil($row['TipoPerfil']);
         $usuario->setStatusConta($row['statusConta']);
         $usuario->setFotoDePerfil($row['fotoUsuario']);
 
