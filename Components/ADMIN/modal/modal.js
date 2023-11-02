@@ -1,12 +1,12 @@
-const openModalButton = document.querySelector(".bx-edit");
-const closeModalButton = document.querySelector("#fechar-modal");
-const modal = document.querySelector("#modal");
-const fade = document.querySelector("#fade");
+let modal = document.getElementById('modal')
+let elemento = document.getElementById('id_escondido')
 
-const toggleModal = () => {
-    [modal , fade].forEach((el) => el.classList.toggle("hide"));
-};
+function abrirModal(id, []){
+    console.log(id);
+    elemento.value = id;
+    modal.showModal();
+}
 
-[openModalButton , closeModalButton , fade].forEach((el) => {
-    el.addEventListener("click", () => toggleModal());
-});
+function fecharModal(){
+    modal.close();
+}
