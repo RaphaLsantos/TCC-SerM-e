@@ -21,6 +21,7 @@ $usuarioDAO = new usuarioDAO();
     <link rel="stylesheet" href="../../components/ADMIN/style.css">
     <link rel="stylesheet" href="../../css/ADMIN/modal.css">
     <!-- Imports -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- BoxIcons CDN links -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -150,7 +151,7 @@ $usuarioDAO = new usuarioDAO();
                                     }
                                     ?></td>
                                 <td>
-                                    <button onclick="abrirModal(<?= $usuario->getIdUsuario() ?>)">
+                                    <button type="button" id="<?= $usuario->getIdUsuario() ?>" class="view_data" onclick="PegarID(<?= $usuario->getIdUsuario(); ?>)">
                                         Open Modal
                                     </button>
                                 </td>
@@ -165,10 +166,10 @@ $usuarioDAO = new usuarioDAO();
     <dialog id="modal">
         <button onclick="fecharModal()">Fechar modal</button>
         <div class="conteudo_modal">
-            <form action="../../Controller/usuarioController.php">
+            <form action="../../Controller/usuarioController.php" method="post">
                 <input type="hidden" id="id_escondido" name="ID">
-                <span>Modal puro</span>
-
+                <span id="info_user"></span>
+                
             </form>
         </div>
     </dialog>

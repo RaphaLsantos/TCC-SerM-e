@@ -18,6 +18,10 @@ if (isset($_POST['registrar'])) {
     $usuario->setEmailUsuario($d['email']);
     $usuario->setDataNascimentoUsuario($d['dataNasc']);
 
+    $palavras = array("MomLife", "MommyWarrior", "MommaMagic", "MamaVibe", "MomStrong", "TenderHeart");
+    $apelido = "@".$palavras[array_rand($palavras)] . rand(10, 100);
+    $usuario->setApelidoUsuario($apelido);
+
     $sql = "SELECT emailUsuario FROM tbusuario WHERE emailUsuario = '$email'";
     $resultado = conexao::getConexao()->query($sql);
     $stmt = $resultado->fetch(PDO::FETCH_ASSOC);
