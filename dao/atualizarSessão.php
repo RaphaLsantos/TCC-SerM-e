@@ -11,7 +11,9 @@ if(!isset($_SESSION['ID_conta'])){
 try {
     $id = $_SESSION['ID_conta'];
 
-    $sql = "SELECT * FROM tbusuario WHERE idUsuario = '$id'";
+    $sql = "SELECT * FROM tbusuario 
+    INNER JOIN tbTipoPerfil ON tbusuario.tipoConta = tbTipoPerfil.idTipo
+    WHERE idUsuario = '$id'";
     $stmt = conexao::getConexao()->prepare($sql);
     $stmt->execute();
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -26,18 +28,8 @@ try {
     $_SESSION['dataNascimento'] = $row['nascUsuario'];
     $_SESSION['telefone'] = $row['telefoneUsuario'];
     $_SESSION['nivelConta'] = $row['nivelConta'];
-
-    if($row['tipoConta'] == 1){
-        $_SESSION['tipoPerfil'] = "Mãe convencional";
-    } else if($row['tipoConta'] == 2){
-        $_SESSION['tipoPerfil'] = "Gestante";
-    } else if($row['tipoConta'] == 3){
-        $_SESSION['tipoPerfil'] = "Tentante";
-    } else if($row['tipoConta'] == 4){
-        $_SESSION['tipoPerfil'] = "Mãe Solo";
-    } else {
-        $_SESSION['tipoPerfil'] = "Desconhecido";
-    }
+    $_SESSION['tipoPerfil'] = $row['TipoPerfil'];
+    
     
     $_SESSION['status'] = $row['statusConta'];
 } catch (PDOException $e) {
