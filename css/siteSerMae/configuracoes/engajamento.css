@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&family=Share+Tech+Mono&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+
+    --btn-padding:.6rem 2rem;
+    --border-radius: 2rem;
+    --card-border-radius:1rem;
+    --search-padding:.6rem 1rem;
+    --card-padding:.1rem;
+}
+body{
+    font-family: 'Neuton', serif;
+    color: var(--preto);
+    background: var(--branco);
+}
+
+
+.text-1{
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--roxa);
+}
+.nav-conta{
+  position: absolute;
+  top: 50px;
+  left: 600px;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  flex-direction: row;
+  gap: 20rem;
+  white-space: nowrap;
+}
+.btn-conta-voltar{
+    padding: var(--btn-padding);
+    cursor: pointer;
+    transition: all ease .5s;
+    font-weight: bold;
+    color: var(--roxa);
+    font-size: 20px;
+  }
+  .text-2{
+      font-size: 25px;
+  }
+
+
+  .corpo_engajamento{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container-contagem{
+    position: absolute;
+    top: 100px;
+    left: 500px;
+  }
+  .container-contagem .text-1{
+    color: var(--preto);
+  }
+  .reacts-numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  .reacts-numbers .icons{
+    display: flex;
+    flex-direction: row;
+    gap: 5.5rem;
+  }
+  .icon-number i{
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--roxa);
+  }
+  .icon-number>h3{
+    font-size: 20px;
+    text-align: center;
+    color: var(--preto);
+    font-weight: bold;
+  }
+
+
+
+  .container-engajamento{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-top: 150px;
+  }
+  .container-engajamento .text-1{
+    display: flex;
+    margin-left: 10rem;
+    color: var(--preto);
+  }
+  .nav-engajamento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  .nav-engajamento i{
+    color: var(--roxa);
+  }
+  .listGeral{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10rem;
+    margin-top: 4rem;
+  }
+  .listGeral .options{
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 15rem;
+  }
+  .options .number{
+    display: flex;
+    color: var(--roxa);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .options .text-2{
+    width: 210px;
+  }
