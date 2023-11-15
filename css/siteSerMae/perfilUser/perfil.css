@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Neuton:wght@200&family=Share+Tech+Mono&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+
+    --btn-padding:.6rem 2rem;
+    --border-radius: 2rem;
+    --card-border-radius:1rem;
+    --search-padding:.6rem 1rem;
+    --card-padding:.1rem;
+}
+body{
+    font-family: 'Neuton', serif;
+    color: var(--preto);
+    background: var(--branco);
+}
+
+/*inicio informações do perfil*/
+.container-profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 145%;
+}
+.fluid-profile{
+    width: 100%;
+    height: auto;
+}
+.fluid-profile .area-perfil {
+    overflow: auto !important;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    height: 100vh;
+    width: 100%;
+}
+.box-perfil {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+.area-bio {
+    margin-left: 10rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -3rem;
+}
+.area-nick-nome {
+    display: flex;
+    flex-direction: row;
+    margin-top: -6px;
+    margin-left: -1px;
+    margin-bottom: -8px;
+    gap: .5rem;
+  }
+.perfil-mulher{
+    font-weight: bold;
+    color: var(--roxa);
+    margin-left: .5rem;
+}
+.area-bio .bio>p {
+    margin: 0;
+    color:var(--roxa);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.8rem;
+    line-height: 2rem;
+    margin-bottom: -2px;
+}
+.informacao-perfil {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.papel-parede-img {
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: 0.25s;
+    cursor: pointer;
+    object-fit: cover;
+}
+.papel-parede-img-perfil img:hover {
+    filter: brightness(0.7);
+}
+.papel-parede-img-perfil {
+    position: sticky;
+}
+.perfil-img {
+    position: absolute;
+    bottom: -1.7rem;
+    left: 2rem;
+    border: solid;
+    border-color: var(--preto);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px rgb(0 0 0 / 30%);
+    transition: 0.25s;
+    cursor: pointer;
+    max-width: 6rem;
+    max-height: 6rem;
+    top: 10rem;
+}
+.seguindo-seguidores {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+.numeros-seguir>p {
+    font-weight: bold;
+    margin: 2px;
+    text-align: center;
+}
+.seguir-text>h1 {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.area-nick-nome .nick>h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*inicio modal*/
+button {
+    background: var(--roxa);
+    border-radius: 19px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    width: 115px;
+    height: 40px;
+    cursor: pointer;
+}
+  #open-modal {
+    background-color: var(--roxa);
+  }
+  button:hover {
+    opacity: 1;
+  }
+  #fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+  #modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    max-width: 90%;
+    height: 600px;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+  }
+  #fade,
+  #modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+  }
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+  .modal-body p {
+    margin-bottom: 1rem;
+  }
+  #modal.hide,
+  #fade.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+  #modal.hide {
+    top: 0;
+  }
+  .modal-body .input-group input{
+    border: 2px solid var(--roxa);
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+  } 
+/*final modal*/
+
+/*publicações, favoritos e dicas - inicio*/
+.options-perfil {
+    display: flex;
+    justify-content: center;
+    margin-top: 22rem;
+    text-align: center;
+}
+.nav-list-option {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-right: 40rem;
+    gap: 3rem;
+}
+.nav-list-option li {
+    margin-right: 20px;
+    color: var(--roxa);
+}
+.nav-list-option li:last-child {
+    margin-right: 0; /* Remove a margem direita do último item */
+}
+.nav-list-option a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--roxa);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+    transition: all ease .5s;
+}
+.nav-list-option a:hover{
+    border-bottom: 2px solid var(--roxa);
+    border-radius: 5px;
+}
+
+.publicacao-card{
+    border-radius: 5px;
+}
+
+.publicacoes {
+    display: inline-flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    justify-content: center;
+    margin-left: 6%;
+    flex-direction: row-reverse;
+}
+
+.publicacao-item {
+    width: 400px;
+    height: 400px;
+    position: relative; /* Define a posição como relativa */
+}
+
+.publicacao-item::before {
+    content: ""; /* Adicione um conteúdo vazio ao pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Comece transparente */
+    transition: background-color 0.3s; /* Adicione uma transição suave de cor de fundo */
+    cursor:pointer;
+}
+
+.publicacao-item:hover::before {
+    background-color: rgba(0, 0, 0, 0.5); /* Escureça o fundo ao passar o mouse sobre o elemento */
+}
+
+/* Estilo adicional para o conteúdo do item (legenda, imagem, etc.) */
+.publicacao-conteudo {
+    position: relative;
+    z-index: 1; /* Certifique-se de que o conteúdo esteja acima do pseudo-elemento */
+}
+
+.card-2 {
+    display: none;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    pointer-events: none;
+    justify-content: center;
+    flex-direction: row;
+    left: 13%;
+    margin-top: -40px;
+}
+
+.icons {
+    display: flex;
+    color: white;
+    gap: 90px; /* Defina a quantidade desejada de espaço entre os ícones */
+    width: 90px;
+    height: 90px;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+/* Estilo adicional para os ícones, se necessário */
+.icons i {
+    font-size: 24px;
+}
+
+  .publicacao-item:hover + .card-2 {
+    display: flex;
+    position: absolute;
+    top: 80%;
+  }
+  .publicacao-item>i:hover + .card-2{
+      display: none;
+  }
+
+  #modal-excluir {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 90%;
+    height: 200px;
+    background-color: #fff;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+}
+
+#fade, #modal-excluir {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body-excluir p {
+    margin-bottom: 1rem;
+}
+
+#modal-excluir.hide, #fade.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#modal-excluir.hide {
+    top: 0;
+}
+
+.modal-body-excluir .input-group input {
+    border: 2px solid var(--roxa);
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+/*publicações, favoritos e dicas - final*/
+
+/*final informações do perfil*/

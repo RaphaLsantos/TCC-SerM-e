@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif ;
+}
+
+:root{
+    --roxa: #a683ff;
+    --verde: #cae4ce;
+    --azul:  #d2ecf2;
+    --rosa:  #ffe3dd;
+    --branco: #fff;
+    --preto: #000;
+}
+
+/* Cadastrar */
+.home-section{
+    position: relative;
+    left: 240px;
+    width: calc(100% - 240px);
+    height: 100vh;
+}
+
+.conteudo-adm{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px 0 0 20px;
+    margin: 0 10px 0 0;
+}
+
+.infoAdms{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 20vh;
+}
+
+.infoAdms .admsCadastrados{
+    background: var(--roxa);
+    height: 20vh;
+    width: 24vw;
+    box-shadow: 0 0 5px black;
+    border-radius: 15px;
+    padding: 20px;
+    user-select: none;
+    transition: all 0.6s ease;
+}
+.infoAdms .admsCadastrados:hover{
+    box-shadow: 0 0 20px black;
+}
+
+.infoAdms .admsCadastrados p{
+    font-size: larger;
+}
+
+.infoAdms .admsCadastrados .numCadastrados{
+    display: flex;
+    align-items: center;
+    height: 90%;
+}
+
+.infoAdms .admsCadastrados .numCadastrados i,
+span{
+    font-size: xx-large;
+}
+
+.infoAdms .admsCadastrados .numCadastrados span{
+    margin-left: 30px;
+}
+
+/* CadastrarAdm */
+.cadastrarAdm{
+    display: flex;
+    width: 100%;
+    height: 65%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+    border-radius: 15px;
+    margin-top: 6%;
+}
+
+.cadastrarAdm .formImage{
+    background-color: var(--roxa);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.cadastrarAdm .formImage img{
+    width: 31rem;
+}
+
+.cadastrarAdm .form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
+
+.cadastrarAdm .formHeader{
+    margin-bottom: 3rem;
+}
+
+.cadastrarAdm .formHeader h2::after{
+    content: '';
+    display: block;
+    width: 7rem;
+    height: 0.3rem;
+    background-color: #a683ff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.cadastrarAdm .form .inputGroups{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cadastrarAdm .form .inputGroups .inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.cadastrarAdm .form .inputGroups .inputBox input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000003c;
+}
+
+.cadastrarAdm .form .inputGroups .inputBox input:hover{
+    background-color: #eeeeee75;
+}
+
+.cadastrarAdm .form .inputGroups .inputBox input:focus-visible{
+    outline: 1px solid var(--roxa);
+}
+
+.cadastrarAdm .form .btnCadastro button{
+    width: 100%;
+    border: none;
+    background-color: var(--roxa);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.cadastrarAdm .form .btnCadastro button:hover{
+    background-color: #6b63fff1;
+}

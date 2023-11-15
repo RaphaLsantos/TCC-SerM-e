@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+#main-login{
+    display: flex;
+}
+
+#main-login .left{
+    background-color: #836FFF;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-login .left h1{
+    color: white;
+    margin: 10px;
+    margin-top: 60px;
+}
+
+#main-login .left h4{
+    color: white;
+    margin-bottom: 50px;
+    margin-left: -180px;
+}
+
+#main-login .left form{
+    display: flex;
+    flex-direction: column;
+}
+
+#main-login .left form label{
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+#main-login .left form input{
+    width: 30vw;
+    height: 6vh;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+#main-login .left form #check{
+    width: 18px;
+    height: 18px;
+    margin: 40px;
+    margin-left: 0px;
+}
+
+#main-login .left form #btn-login-adm{
+    background-color: #B0E0E6;
+    color: white;
+    width: 30vw;
+    height: 6vh;
+    border-radius: 6px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: larger;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+#main-login .left a{
+    color: white;
+    margin-top: 60px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/*Lado Direito*/
+#main-login .rigth{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1189px) {
+    #main-login .rigth{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    #main-login{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #main-login .left{
+        width: 100%;
+    }
+
+    #main-login .left form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    #main-login .left #input-nome{
+        width: 70vw;
+    }
+    #main-login .left #input-senha{
+        width: 70vw;
+    }
+
+    #main-login .left form #btn-login-adm{
+        width: 70vw;
+    }
+
+    #main-login .left form #check{
+        margin-left: -62vw;
+    }
+
+    #main-login .rigth{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 562px) {
+    #main-login .left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #main-login .left form{
+        display: flex;
+        align-items: center;
+        width: 90%;
+    }
+
+    #main-login .left #input-nome{
+        width: 70vw;
+    }
+
+    #main-login .left #input-senha{
+        width: 70vw;
+    }
+
+    #main-login .left form #check{
+        margin-left: -58vw;
+    }
+
+    #main-login .left form #btn-login-adm{
+        width: 70vw;
+    }
+}
