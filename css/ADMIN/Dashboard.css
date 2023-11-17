@@ -1,0 +1,44 @@
+:root {
+    --cor-principal : #219C90;
+    --cor-secundaria : #E9B824;
+    --cor-terciaria : #D83F31;
+    --cor-texto : #FFFFFF;
+
+
+}
+
+.card_cadastros{
+    background-color: var(--cor-principal);
+    width: 260px;
+    height: 180px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaaa;
+}
+
+.card_suspensos{
+    background-color: var(--cor-secundaria);
+    width: 260px;
+    height: 180px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaaa;
+}
+
+.card_banidos{
+    background-color: var(--cor-terciaria);
+    width: 260px;
+    height: 180px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 12px #aaaa;
+}
+
+.card_texto{
+    color: var(--cor-texto);
+    font-size: 16px;
+    text-align: center;
+}
+
+.card_valor{
+    color: var(--cor-texto);
+    font-size: 50px;
+    text-align: center;
+}
