@@ -70,7 +70,3 @@ Este é um projeto acadêmico. Sugestões e melhorias são bem-vindas via Pull R
 
 ## Licença
 Este projeto está sob a licença MIT.
-
----
-**Manus AI**
-Fevereiro de 2026
