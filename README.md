@@ -69,4 +69,4 @@ Abra o navegador e acesse:
 Este é um projeto acadêmico. Sugestões e melhorias são bem-vindas via Pull Requests ou Issues.
 
 ## Licença
-Este projeto está sob a licença MIT.
+Este projeto está sob a licença MIT!
